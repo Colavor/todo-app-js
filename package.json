@@ -1,0 +1,26 @@
+{
+  "name": "trash-vs",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000S\u0000u\u0000m\u0000m\u0000e\u0000r\u0000\r\u0000 \u0000",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Colavor/Summer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Colavor/Summer/issues"
+  },
+  "homepage": "https://github.com/Colavor/Summer#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.5.0",
+    "globals": "^17.6.0"
+  }
+}

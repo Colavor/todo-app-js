@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <!-- HEADER -->
+      <header class="app__header">
+        <h1 class="app__title">ToDo List</h1>
+      </header>
+
+      <!-- CONTROLS -->
+      <section class="app__controls">
+        <!-- FILTERS -->
+        <div class="controls__group">
+          <label for="filter">Фильтры:</label>
+          <select name="filter" class="filter">
+            <option value="all">Все</option>
+            <option value="active">Активные</option>
+            <option value="completed">Выполненные</option>
+          </select>
+        </div>
+
+        <!-- SORT -->
+        <div class="controls__group">
+          <label for="sort">Сортировка</label>
+          <select name="sort" class="sort">
+            <option value="newOld">По дате создания (новые / старые)</option>
+            <option value="deadlane">По дедлайну</option>
+            <option value="priority">По приоритету</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- ADD TASK -->
+      <section class="app__add">
+        <input type="text" placeholder="Введите задачу..." data-input="task" />
+
+        <select data-input="priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <input type="date" data-input="deadline" />
+
+        <button data-action="add-task">Добавить</button>
+      </section>
+
+      <!-- STATS -->
+      <section class="app__stats">
+        <span data-stats="total">Всего: 0</span>
+        <span data-stats="active">Активных: 0</span>
+        <span data-stats="completed">Выполненных: 0</span>
+      </section>
+
+      <!-- TASK LIST -->
+      <main class="app__main">
+        <ul class="tasks" data-list="tasks"></ul>
+      </main>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal hidden" data-modal="edit">
+      <div class="modal__content">
+        <input type="text" data-edit="text" />
+
+        <select data-edit="priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <input type="date" data-edit="deadline" />
+
+        <button data-edit="save">Save</button>
+        <button data-edit="cancel">Cancel</button>
+      </div>
+    </div>
+  </body>
+</html>
